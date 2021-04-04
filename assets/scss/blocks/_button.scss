@@ -1,0 +1,18 @@
+.button {
+  padding: 17px 38px;
+  border-radius: 10px;
+  background-color: $main-color;
+  @include text-style(1.8rem, 700, $white-color);
+
+  &--md {
+    padding: 17px 54px;
+  }
+
+  &--lg {
+    padding: 17px 96px;
+  }
+
+  &--w100 {
+    width: 100%;
+  }
+}

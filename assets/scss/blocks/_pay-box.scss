@@ -1,0 +1,209 @@
+.pay-box {
+
+  padding: 120px 0;
+  position: relative;
+
+  &__container {
+    @extend %container;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__side-img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__action-box {
+    width: 460px;
+    padding: 42px 25px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(138, 149, 158, 0.15);
+    text-align: center;
+  }
+
+  &__inputs {
+    padding-bottom: 49px;
+    width: 357px;
+    margin: 0 auto 40px;
+    border-bottom: 1px solid rgba(#A0A3BD, .4);
+  }
+
+  &__input-group {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__label {
+    @include text-style(1.8rem, 400, $accent-color);
+    display: block;
+    margin-bottom: 12px;
+    line-height: 21px;
+
+    &--mb0 {
+      margin-bottom: 0;
+    }
+
+    &--overline {
+      span {
+        text-decoration: line-through;
+        font-weight: 400 !important;
+      }
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__input {
+    width: 279px;
+    border: 1px solid $accent-color;
+    border-radius: 11px;
+    background-color: #fbfbfb;
+    @include text-style(1.8rem, 400, $accent-color);
+    padding: 17px 0 17px 60px;
+
+    &--sm {
+      padding: 12px 0 12px 60px;
+    }
+  }
+
+  &__new-price {
+    position: absolute;
+    right: 45px;
+    top: calc(100% + 10px);
+    @include text-style(2.4rem, 700, $main-color);
+
+    span {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__apply-btn {
+    display: block;
+    margin: 20px auto 20px;
+    width: 279px;
+    border-radius: 11px;
+    border: 1px solid $main-color;
+    background-color: #fbfbfb;
+    @include text-style(1.8rem, 400, #eb5757);
+    padding: 9px 0;
+
+    transition: .2s all;
+
+    &[disabled] {
+      background-color: #e0e8eb;
+      border: none;
+      color: #828282;
+    }
+  }
+
+  &__policy-text {
+    @include text-style(1.4rem, 400, $accent-color);
+    margin-bottom: 24px;
+
+    a {
+      @include text-style(1.4rem, 400, $accent-color);
+      text-decoration: underline;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__row {
+      justify-content: center;
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+
+  @include respond(phone) {
+    padding: 60px 0;
+
+    &__heading {
+      margin-bottom: 12px;
+      text-align: left;
+      font-size: 3.6rem;
+    }
+
+    &__action-box {
+      width: 343px;
+      padding: 30px 20px;
+      text-align: left;
+    }
+
+    &__inputs {
+      padding-bottom: 24px;
+      width: unset;
+    }
+
+    &__input-group {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__label {
+      @include text-style(1.4rem, 400, $accent-color);
+      margin-bottom: 20px;
+    }
+
+    &__new-price {
+      right: 97px;
+      top: calc(100% + 5px);
+      @include text-style(1.8rem, 700, $main-color);
+
+      span {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      @include text-style(1.4rem, 400, $accent-color);
+      padding: 19px 16px;
+
+      &--sm {
+        padding: 12px 16px;
+      }
+    }
+
+    &__apply-btn {
+      display: block;
+      margin: 20px 0 0;
+      width: 100%;
+      @include text-style(1.4rem, 400, #eb5757);
+      padding: 12px 0;
+    }
+
+    &__policy-text {
+      @include text-style(1.2rem, 400, $accent-color);
+
+      a {
+        @include text-style(1.2rem, 400, $accent-color);
+      }
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

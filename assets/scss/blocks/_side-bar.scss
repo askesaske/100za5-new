@@ -1,0 +1,60 @@
+.side-bar {
+  padding: 15px 50px 55px 75px;
+  height: 100vh;
+  position: fixed;
+  left: -110%;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all .5s ease-in-out;
+
+  &--active {
+    left: 0;
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 30px;
+    top: 45px;
+    cursor: pointer;
+  }
+
+  &__links {
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    display: block;
+    cursor: pointer;
+    @include text-style(1.8rem, 400, $accent-color);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include respond(phone) {
+    left: unset;
+    right: -110%;
+    padding: 80px 40px 90px;
+
+    &--active {
+      right: 0;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+}
+
+.active_link {
+  @include text-style(1.8rem, 700, $main-color);
+  text-decoration: underline;
+}

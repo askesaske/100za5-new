@@ -1,0 +1,73 @@
+.video-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(0, 4, 49, .8);
+  backdrop-filter: blur(20px);
+
+  transform: scale(0);
+  transition: all .3s;
+
+  &--open {
+    transform: scale(1);
+  }
+
+  &__close {
+    position: absolute;
+    top: 120px;
+    right: 230px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 430px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__wrapper {
+      width: 600px;
+      height: 286px;
+    }
+
+    &__play {
+      width: 80px;
+    }
+
+    &__close {
+      top: 200px;
+      right: 80px;
+    }
+  }
+
+  @include respond(phone) {
+    &__wrapper {
+      width: 343px;
+      height: 208px;
+    }
+
+    &__play {
+      width: 70px;
+    }
+
+    &__close {
+      top: 240px;
+      right: 15px;
+    }
+  }
+}

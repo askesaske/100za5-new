@@ -1,0 +1,143 @@
+.footer {
+  background-image: url("../assets/img/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 85px 0 80px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin-top: -32px;
+    cursor: pointer;
+  }
+
+  &__links {
+    &:first-child {
+      margin-right: 60px;
+    }
+  }
+
+  &__link-group {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__link {
+    display: block;
+    @include text-style(1.8rem, 400, rgba(#f2f2f2, .8));
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__contacts {
+
+  }
+
+  &__contact {
+    display: flex;
+    align-items: flex-start;
+    @include text-style(1.8rem, 400, #e0e8eb);
+    line-height: 21px;
+
+    svg {
+      margin-right: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &:first-child {
+      font-weight: 700;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__social {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @include respond(tab-land) {
+    &__contacts {
+      margin: 30px 0;
+    }
+  }
+
+  @include respond(phone) {
+    &__logo {
+      margin-top: -32px;
+      margin-bottom: 40px;
+    }
+
+    &__row {
+      display: block;
+    }
+
+    &__socials {
+      margin-bottom: 40px;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: flex;
+      }
+    }
+
+    &__link {
+      @include text-style(1.4rem, 400, rgba(#f2f2f2, .8));
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      &--shrink0 {
+        white-space: nowrap;
+      }
+    }
+
+    &__contacts {
+      margin: 40px 0 0;
+    }
+
+    &__contact {
+      @include text-style(1.4rem, 700, #e0e8eb);
+      line-height: 16px;
+      align-items: center;
+
+      br {
+        display: none;
+      }
+
+      svg {
+        margin-right: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

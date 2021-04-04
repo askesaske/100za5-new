@@ -1,0 +1,63 @@
+.partnership {
+
+  padding: 60px 0 100px;
+  position: relative;
+
+  &__side {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__container {
+    @extend %container;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    max-width: 760px;
+    margin: 0 auto 40px;
+
+    @include text-style(2.4rem, 400, $accent-color);
+    line-height: 28px;
+    text-align: center;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include text-style(2.4rem, 700, $accent-color);
+
+    svg {
+      margin-right: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond(phone) {
+    &__text {
+      margin: 0 auto 24px;
+
+      @include text-style(1.6rem, 400, $accent-color);
+      line-height: 18.7px;
+    }
+
+    &__phone {
+      @include text-style(1.7rem, 700, $accent-color);
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+  }
+}

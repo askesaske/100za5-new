@@ -1,0 +1,46 @@
+.lang-switcher {
+
+  $e: &;
+
+  display: flex;
+  align-items: center;
+
+  &--dark {
+
+    #{$e}__lang-box {
+      background-color: rgba(#010A68, .3);
+      font-weight: 700;
+
+      &--active {
+        background-color: #010A68;
+        color: $white-color;
+      }
+    }
+  }
+
+  &__lang-box {
+    width: 62px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    @include text-style(1.4rem, 400, $white-color);
+    background-color: rgba($white-color, .3);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &--active {
+      font-weight: 700;
+      color: #000000;
+      background-color: $white-color;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+}

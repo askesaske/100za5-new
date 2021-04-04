@@ -1,0 +1,195 @@
+.prize-page {
+  padding: 60px 0 100px;
+  position: relative;
+
+  &__heading {
+
+    &--nf {
+      text-align: center;
+      padding: 60px 0;
+    }
+  }
+
+  &__left-img {
+    position: absolute;
+    left: 0;
+    top: 200px;
+  }
+
+  &__bottom-img {
+    position: absolute;
+    right: 0;
+    bottom: 90px;
+  }
+
+  &__container {
+    @extend %container;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__img {
+    display: block;
+    max-width: 600px;
+    margin: 60px auto 60px;
+  }
+
+  &__video {
+    display: block;
+    //max-width: 600px;
+    margin: 60px auto 60px;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+
+  &__date {
+    @include text-style(2.4rem, 400, $accent-color);
+    span {
+      font-weight: 700;
+      color: $main-color;
+      text-decoration: underline;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    @include text-style(2.4rem, 400, $accent-color);
+    line-height: 28px;
+    margin-top: 60px;
+  }
+
+  &__back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include text-style(1.8rem, 400, #FF083D);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__time-left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  &__time-item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      &:after {
+        content: ':';
+        position: absolute;
+        @include text-style(3.6rem, 700, $accent-color);
+        top: 18px;
+        left: 111px;
+      }
+    }
+  }
+
+  &__time-box {
+    width: 98px;
+    height: 78px;
+    background-color: $white-color;
+    box-shadow: 0 0 30px rgba(175, 175, 175, 0.27);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include text-style(3.6rem, 700, $main-color);
+
+    margin-bottom: 10px;
+  }
+
+  &__time-text {
+    @include text-style(2.4rem, 400, $accent-color);
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    &__bottom-img {
+      width: 207px;
+      bottom: 20px;
+    }
+
+    &__left-img {
+      display: none;
+    }
+
+    &__heading {
+      margin-bottom: 40px;
+    }
+
+    &__video {
+      margin: 60px auto 60px;
+    }
+
+    &__img {
+      width: 204px;
+      margin: 0 auto 25px;
+    }
+
+    &__info {
+      text-align: center;
+
+      &--mb60 {
+        margin-bottom: 60px;
+      }
+    }
+
+    &__date {
+      @include text-style(1.8rem, 400, $accent-color);
+
+      &:not(:first-child) {
+        margin-top: 13px;
+      }
+    }
+
+    &__text {
+      @include text-style(1.8rem, 400, $accent-color);
+      line-height: 21px;
+      margin-top: 40px;
+    }
+
+    &__time-item {
+      &:not(:last-child) {
+        margin-right: 30px;
+
+        &:after {
+          font-size: 2.4rem;
+          left: 67px;
+        }
+      }
+    }
+
+    &__time-box {
+      width: 57px;
+      height: 58px;
+      font-size: 2.4rem;
+    }
+
+    &__time-text {
+      font-size: 1.8rem;
+    }
+  }
+}

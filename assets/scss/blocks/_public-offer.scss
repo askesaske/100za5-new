@@ -1,0 +1,75 @@
+.public-offer {
+  padding: 60px 0 100px;
+  position: relative;
+
+  &__container {
+    @extend %container;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__section {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    @include text-style(2rem, 700, $main-color);
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include text-style(2rem, 400, $accent-color);
+    line-height: 23.4px;
+
+    span {
+      font-weight: 700;
+    }
+
+    ul {
+      padding-left: 50px;
+      margin-top: 10px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond(phone) {
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__title {
+      @include text-style(1.6rem, 700, $main-color);
+      margin-bottom: 12px;
+    }
+
+    &__text {
+      @include text-style(1.6rem, 400, $accent-color);
+      line-height: 18.7px;
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

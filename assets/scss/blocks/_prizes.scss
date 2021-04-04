@@ -1,0 +1,45 @@
+.prizes {
+  padding: 60px 0;
+  position: relative;
+
+  &__left-img {
+    position: absolute;
+    left: 0;
+    top: 37px;
+  }
+
+  &__right-img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    text-align: center;
+    @include text-style(3.6rem, 600, $accent-color);
+    margin-bottom: 60px;
+  }
+
+  &__list {
+
+  }
+
+  @include respond(phone) {
+    &__left-img {
+      width: 150px;
+      top: 0;
+    }
+
+    &__right-img {
+      width: 150px;
+      right: 0;
+      top: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

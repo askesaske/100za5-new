@@ -1,0 +1,58 @@
+@import "nullstyle.scss";
+
+//* {
+//  background: #000 !important;
+//  color: #0f0 !important;
+//  outline: solid #f00 1px !important;
+//}
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/typography";
+@import "abstracts/animations";
+
+// blocks
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/welcome-section";
+@import "blocks/participant";
+@import "blocks/benefit-box";
+@import "blocks/white-section";
+@import "blocks/products-list";
+@import "blocks/customers-list";
+@import "blocks/button";
+@import "blocks/footer";
+@import "blocks/lang-switcher";
+@import "blocks/side-bar";
+@import "blocks/video-modal";
+@import "blocks/modal";
+@import "blocks/input";
+@import "blocks/prizes";
+@import "blocks/prize-page";
+@import "blocks/buyers";
+@import "blocks/info-page";
+@import "blocks/faq";
+@import "blocks/partnership";
+@import "blocks/status-page";
+@import "blocks/pay-box";
+@import "blocks/public-offer";
+@import "blocks/products-slider";
+@import "blocks/not-found";
+
+html, body {
+  font-size: 62.5%;
+  font-family: $base-font;
+  //scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// swiper styles
+
+
+
+
+

@@ -1,0 +1,174 @@
+.participant {
+
+  padding: 100px 0;
+  background-image: url("../assets/img/main-bg1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 92px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__heading {
+    margin-bottom: 118px;
+  }
+
+  &__steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 145px;
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      &:nth-child(2) {
+        z-index: 2;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__step-number {
+    position: absolute;
+    z-index: 1;
+    top: -52px;
+
+    &--01 {
+      left: -40px;
+    }
+
+    &--02 {
+      left: -25px;
+    }
+
+    &--03 {
+      left: -2px;
+    }
+  }
+
+
+  &__step-title {
+    text-align: center;
+    @include text-style(1.8rem, 400, $accent-color);
+    line-height: 21px;
+
+    span {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__qr-box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__qr-img {
+    width: 240px;
+    height: 240px;
+    margin-right: 86px;
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__qr-arrow {
+    position: absolute;
+    top: -100px;
+    left: -40px;
+  }
+
+  &__qr-title {
+    @include text-style(3.6rem, 700, $accent-color);
+    margin-bottom: 60px;
+  }
+
+  &__download-box {
+    display: flex;
+    align-items: center;
+
+    a {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__mobile-app {
+    display: none;
+    position: relative;
+  }
+
+  @include respond(tab-land) {
+    &__steps {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 145px;
+    }
+
+    &__step {
+      &:first-child {
+        margin-right: 50px;
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  @include respond(phone) {
+    &__steps {
+      margin-bottom: 100px;
+    }
+
+    &__step {
+      margin-bottom: 100px;
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+    &__qr-box {
+      display: none;
+    }
+
+    &__mobile-app {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__qr-title {
+      @include text-style(2.4rem, 700, $accent-color);
+      margin-bottom: 0;
+    }
+
+    &__download-box {
+      display: block;
+      flex-shrink: 0;
+      margin-right: 20px;
+      a {
+        display: block;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    &__qr-arrow {
+      position: absolute;
+      width: 83px;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

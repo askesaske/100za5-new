@@ -1,0 +1,31 @@
+.status-page {
+  padding: 144px 0;
+  position: relative;
+
+  &__container {
+    @extend %container;
+    text-align: center;
+  }
+
+  &__img {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include text-style(3.6rem, 700, $accent-color);
+    line-height: 42px;
+    margin-bottom: 60px;
+  }
+
+  @include respond(phone) {
+    &__img {
+      width: 70px;
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      font-size: 2.4rem;
+      line-height: 28px;
+    }
+  }
+}

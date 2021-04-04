@@ -1,0 +1,51 @@
+.header {
+
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 23px 0 8px 0;
+  z-index: 5;
+
+  &--static {
+    background-color: $main-color;
+    position: relative;
+  }
+
+  &__languages {
+
+  }
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-top: -15px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  &__burger {
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  @include respond(tab-land) {
+
+    &__logo {
+      margin-right: auto;
+    }
+
+    &__burger {
+      margin-right: unset;
+    }
+
+    &__languages {
+      display: none !important;
+    }
+
+  }
+}

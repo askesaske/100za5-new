@@ -1,0 +1,42 @@
+.customers-list {
+
+  display: grid;
+  grid-template-columns: repeat(3, 262px);
+  grid-row-gap: 40px;
+  justify-content: space-between;
+
+  &__item {
+    text-align: center;
+  }
+
+  &__img {
+    border-radius: 10px;
+    width: 262px;
+    height: 237px;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @include text-style(2.4rem, 700, $main-color);
+    margin-bottom: 10px;
+  }
+
+  &__date {
+    @include text-style(1.4rem, 400, rgba(#0D1428, .5));
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 262px);
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(2, 125px);
+    justify-content: space-around;
+
+    &__img {
+      width: 100%;
+      height: unset;
+      margin-bottom: 20px;
+    }
+  }
+}
