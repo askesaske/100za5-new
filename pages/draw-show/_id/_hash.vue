@@ -4,7 +4,8 @@
     <img src="../../../assets/img/prize-side-left.png" alt="" class="prize-page__left-img">
     <img src="../../../assets/img/100za5-text.png" alt="" class="prize-page__bottom-img">
 
-    <div class="prize-page__container not-found" v-for="d in draw" v-if="d.status === 1">
+    <div class="prize-page__container not-found" v-for="d in draw"
+         v-if="new Date(d.date.split(' ')[0].split('.').reverse().join('/') + ' ' + d.date.split(' ')[1]) - curDate < 0">
       <img src="../../../assets/img/not-found.png" alt="" class="not-found__img">
       <div class="not-found__text">
         Розыгрыш завершен
@@ -47,7 +48,6 @@
         </div>
 
         <vue-count-down
-          v-if="new Date(d.date.split(' ')[0].split('.').reverse().join('/') + ' ' + d.date.split(' ')[1]) - curDate > 0"
           :time="Math.abs(new Date(d.date.split(' ')[0].split('.').reverse().join('/') + ' ' + d.date.split(' ')[1]) - curDate)"
           v-slot="{ days, hours, minutes, seconds }"
           class="prize-page__time-left">
@@ -77,35 +77,6 @@
           </div>
         </vue-count-down>
 
-        <div
-          v-else
-          class="prize-page__time-left">
-          <div class="prize-page__time-item">
-            <div class="prize-page__time-box">
-              0
-            </div>
-            <div class="prize-page__time-text">Дней</div>
-          </div>
-          <div class="prize-page__time-item">
-            <div class="prize-page__time-box">
-              0
-            </div>
-            <div class="prize-page__time-text">Часов</div>
-          </div>
-          <div class="prize-page__time-item">
-            <div class="prize-page__time-box">
-              0
-            </div>
-            <div class="prize-page__time-text">Минут</div>
-          </div>
-          <div class="prize-page__time-item">
-            <div class="prize-page__time-box">
-              0
-            </div>
-            <div class="prize-page__time-text">Секунд</div>
-          </div>
-        </div>
-
         <p class="prize-page__text">
           {{ d.comment }}
         </p>
@@ -129,8 +100,6 @@
         Посмотреть список розыгрышей
       </nuxt-link>
     </div>
-
-
 
   </div>
 </template>
@@ -156,6 +125,11 @@ export default {
     };
   },
   mounted() {
+  },
+  computed:{
+    calcDate(date, time) {
+      return Math.abs(new Date(date + ' ' + time) - this.curDate);
+    }
   },
   methods: {
     registerOnDraw(d) {

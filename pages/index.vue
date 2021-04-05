@@ -12,9 +12,9 @@
             {{ $t('welcome.subtitle') }}
           </p>
           <div class="welcome-section__row welcome-section__row--desktop">
-            <nuxt-link to="/Prizes" tag="button" class="welcome-section__btn">
+            <button class="welcome-section__btn">
               {{ $t('welcome.buttonTxt') }}
-            </nuxt-link>
+            </button>
 
             <div class="welcome-section__video" @click="openVideo">
               <div class="welcome-section__play-box">

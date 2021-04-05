@@ -49,9 +49,9 @@
         <div class="side-bar__link" @click.passive="toggleSideBar">
           <nuxt-link :to="localePath('/Rules')" tag="a" class="side-bar__link">{{ $t('navigation.rules') }}</nuxt-link>
         </div>
-        <div class="side-bar__link" @click.passive="toggleSideBar">
-          <nuxt-link :to="localePath('/Prizes')" tag="a" href="#" class="side-bar__link">{{ $t('navigation.listOfGoods') }}</nuxt-link>
-        </div>
+<!--        <div class="side-bar__link" @click.passive="toggleSideBar">-->
+<!--          <nuxt-link :to="localePath('/Prizes')" tag="a" href="#" class="side-bar__link">{{ $t('navigation.listOfGoods') }}</nuxt-link>-->
+<!--        </div>-->
         <div class="side-bar__link" @click.passive="toggleSideBar">
           <nuxt-link :to="localePath('/Buyers')" tag="a" class="side-bar__link">{{ $t('navigation.customers') }}</nuxt-link>
         </div>

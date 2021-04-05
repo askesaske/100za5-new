@@ -11,11 +11,11 @@
 
 
       <div style="padding:50.25% 0 0 0;position:relative;" class="prize-page__video" v-if="d.prize.videos">
-        <iframe :src="'https://www.youtube.com/embed/' + video.split('/')[3]"
+        <iframe :src="'https://www.youtube.com/embed/' + video.split('/')[3] + '?&autoplay=1'"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
-                v-for="video in d.prize.videos">
+                v-for="video in d.prize.videos" id="youtube-video">
         </iframe>
       </div>
 
@@ -26,7 +26,7 @@
 
       <div class="prize-page__info">
         <div class="prize-page__date">
-          Дата: <span>{{ d.date | moment('DD.MM.YYYY') }}</span>
+          Дата: <span>{{ d.date.split(' ')[0] }}</span>
         </div>
         <div class="prize-page__date">
           Время: <span>{{ d.date.substr(11, 5) }}</span>
@@ -142,9 +142,10 @@ export default {
       });
   },
   mounted() {
+
   },
   updated() {
-
+    // document.getElementsByClassName('ytp-button')[0].click();
   }
 }
 </script>
