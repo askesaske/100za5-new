@@ -36,6 +36,7 @@ export default {
   */
   plugins: [
     {src: "~/plugins/defaultPlugin", mode: "client"},
+    {src: "~/plugins/gtm", mode: "client"},
   ],
   /*
   ** Auto import components
