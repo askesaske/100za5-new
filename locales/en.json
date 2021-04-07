@@ -1,7 +1,7 @@
 {
   "welcome": {
     "heading": "Dream big - <br> pay less!",
-    "subtitle": "Join the “100 za 5” club and every day you will get the opportunity to buy products for 5% off their price. Tech equipment, cosmetics, cinema and restaurant certificates, cars and even flats - you can buy them all at a 95% discount.",
+    "subtitle": "Join the “100 za 5” club and every day you will get the opportunity to buy products for 5% off their price. Tech equipment, cosmetics, cinema and restaurant vouchers, cars and even flats - you can buy them all at a 95% discount.",
     "videoTxt": "Watch the promo video",
     "buttonTxt": "Goods for 5%"
   },
@@ -16,9 +16,9 @@
   "benefit": {
     "heading": "What's in it for you?",
     "subtitle": "Receive 10 great offers every day and get products at <span>95% DISCOUNT. <br> FIVE PERCENTS</span> are yours to pay.",
-    "cardTitle1": "Every day - 10 prizes",
+    "cardTitle1": "Every day - 10 goods",
     "cardTitle2": "Opportunity to buy awesome goods <br> with a great discount",
-    "cardTitle3": "Top prizes - a car <br> and a flat!"
+    "cardTitle3": "Top goods - a car <br> and a flat!"
   },
   "payFee": {
     "heading": "Pay the fee",
@@ -34,7 +34,7 @@
   },
   "products": {
     "heading": "Products of the week",
-    "subtitle": "Here you'll find everything from cosmetics and vouchers for cinemas, cafés and hotels to gadg¬ets and household appliances to cars and flats.",
+    "subtitle": "Here you'll find everything from cosmetics and vouchers for cinemas, cafés and hotels to gadgets and household appliances to cars and flats.",
     "viewAll": "View all products"
   },
   "customers": {
@@ -203,6 +203,20 @@
       "text2": "posting in the media, including social networks, mobile messengers, etc., unreliable, negative information about the Service Provider(s), goods and/or services, discrediting in any form the name of these legal entities and (or) commits actions which negatively influence their reputation;",
       "text3": "the Club Fee has not been paid at the end of the paid period.",
       "title4": "12.4. This Agreement comes into force at the moment of User's accession to the Offer, i.e., when User accepts the Offer in the manner prescribed in the Agreement and is valid until the Parties perform their obligations in full or until terminated in the cases and manner prescribed in the Agreement."
+    }
+  },
+  "productsOfTheWeek": {
+    "item1": {
+      "title": "Coffee machine",
+      "desc": "Start your day in the best mood and enjoy a cup of coffee with a refreshing taste from the stylish BOSCH coffee machine."
+    },
+    "item2": {
+      "title": "Vacuum cleaner",
+      "desc": "A cordless handheld vacuum cleaner with a lightweight design. Handy and portable for easy cleaning."
+    },
+    "item3": {
+      "title": "Massager",
+      "desc": "Percussion massager for isolated muscle massage. Compact, powerful, and effective! For regeneration of all muscle groups, including before and after physical exertion."
     }
   }
 }

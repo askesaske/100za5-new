@@ -264,42 +264,62 @@
             {{ $t('products.subtitle') }}
           </p>
 
-<!--          <div class="white-section__list products-slider">-->
+          <!--          <div class="white-section__list products-slider">-->
 
-<!--            <div class="swiper-container products-slider__swiper-container">-->
-<!--              <div class="swiper-wrapper">-->
-<!--                <div v-for="prize in prizes" :key="prize.id" class="swiper-slide products-slider__item">-->
-<!--                  <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">-->
-<!--                  <div class="products-slider__info">-->
-<!--                    <div class="products-slider__title">-->
-<!--                      {{ prize.name }}-->
-<!--                    </div>-->
-<!--                    <div class="products-slider__desc" v-html="prize.desc">-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="swiper-pagination products-slider__pagination"></div>-->
+          <!--            <div class="swiper-container products-slider__swiper-container">-->
+          <!--              <div class="swiper-wrapper">-->
+          <!--                <div v-for="prize in prizes" :key="prize.id" class="swiper-slide products-slider__item">-->
+          <!--                  <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">-->
+          <!--                  <div class="products-slider__info">-->
+          <!--                    <div class="products-slider__title">-->
+          <!--                      {{ prize.name }}-->
+          <!--                    </div>-->
+          <!--                    <div class="products-slider__desc" v-html="prize.desc">-->
+          <!--                    </div>-->
+          <!--                  </div>-->
+          <!--                </div>-->
+          <!--              </div>-->
+          <!--              <div class="swiper-pagination products-slider__pagination"></div>-->
 
-<!--              <div class="swiper-button-next products-slider__next"></div>-->
-<!--              <div class="swiper-button-prev products-slider__prev"></div>-->
-<!--            </div>-->
+          <!--              <div class="swiper-button-next products-slider__next"></div>-->
+          <!--              <div class="swiper-button-prev products-slider__prev"></div>-->
+          <!--            </div>-->
 
-<!--          </div>-->
+          <!--          </div>-->
 
           <div class="white-section__list products-slider">
 
             <div class="products-slider__row">
-                <div v-for="prize in prizes" :key="prize.id" class="products-slider__item">
-                  <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">
-                  <div class="products-slider__info">
-                    <div class="products-slider__title">
-                      {{ prize.name }}
-                    </div>
-                    <div class="products-slider__desc" v-html="prize.desc">
-                    </div>
+
+              <div class="products-slider__item">
+                <img src="../assets/img/slider/coffe-machine.png" alt="" class="products-slider__img">
+                <div class="products-slider__info">
+                  <div class="products-slider__title">{{ $t('productsOfTheWeek.item1.title') }}</div>
+                  <div class="products-slider__desc">
+                    {{ $t('productsOfTheWeek.item1.desc') }}
                   </div>
                 </div>
+              </div>
+
+              <div class="products-slider__item">
+                <img src="../assets/img/slider/vaccum.png" alt="" class="products-slider__img">
+                <div class="products-slider__info">
+                  <div class="products-slider__title">{{ $t('productsOfTheWeek.item2.title') }}</div>
+                  <div class="products-slider__desc">
+                    {{ $t('productsOfTheWeek.item2.desc') }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="products-slider__item">
+                <img src="../assets/img/slider/massager.png" alt="" class="products-slider__img">
+                <div class="products-slider__info">
+                  <div class="products-slider__title">{{ $t('productsOfTheWeek.item3.title') }}</div>
+                  <div class="products-slider__desc">
+                    {{ $t('productsOfTheWeek.item3.desc') }}
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -374,27 +394,6 @@ export default {
       errorMessage2: '',
       promoCodeUsed: false,
       tmpData: [],
-
-      prizes: [
-        {
-          id: 1,
-          name: "Кофеварка",
-          desc: "Начните свой день с отличного настроения и чашечки кофе с наcыщенным вкуcом приготовленным стильной кофеваркой от BOSCH.",
-          img: "coffe-machine.png"
-        },
-        {
-          id: 2,
-          name: "Пылесос",
-          desc: "Беспроводной ручной пылесос с облегченной конструкцией корпуса. Удобный и компактный для легкой уборки.",
-          img: "vaccum.png"
-        },
-        {
-          id: 3,
-          name: "Массажер",
-          desc: "Перкуссионный массажер  для изолированного массажа мышц. Компактный, мощный, эффективный! Для восстановления всех групп мышц, в том числе до и после физических нагрузок. ",
-          img: "massager.png"
-        },
-      ]
     };
   },
   watch: {},

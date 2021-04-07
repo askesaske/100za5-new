@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 320px;
 
     img {
       &:nth-child(2) {
@@ -41,7 +42,7 @@
     top: -52px;
 
     &--01 {
-      left: -40px;
+      left: -15px;
     }
 
     &--02 {
@@ -49,7 +50,7 @@
     }
 
     &--03 {
-      left: -2px;
+      left: -15px;
     }
   }
 
