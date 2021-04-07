@@ -4,9 +4,7 @@
     <section class="main__welcome-section welcome-section">
       <div class="welcome-section__container">
         <div class="welcome-section__info">
-          <h1 class="welcome-section__heading">
-            {{ $t('welcome.heading') }}
-          </h1>
+          <h1 class="welcome-section__heading" v-html="$t('welcome.heading')"></h1>
 
           <p class="welcome-section__text">
             {{ $t('welcome.subtitle') }}
