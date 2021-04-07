@@ -22,12 +22,23 @@
       </h3>
 
       <div style="padding:50.25% 0 0 0;position:relative;" class="prize-page__video" v-if="d.prize.videos">
-        <iframe :src="'https://www.youtube.com/embed/' + video.split('/')[3]"
+        <iframe :src="'https://www.youtube.com/embed/' + video.split('/')[3] + '?autoplay=1'"
                 style="position:absolute;top:0;left:0;width:100%;height:100%;"
                 frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen
                 v-for="video in d.prize.videos">
         </iframe>
+
+<!--        <no-ssr>-->
+<!--          <section>-->
+<!--            <h2>listening events</h2>-->
+<!--            <youtube :video-id="videoId" @ready="ready" @playing="playing"></youtube>-->
+<!--          </section>-->
+<!--          <section>-->
+<!--            <h2>add options</h2>-->
+<!--            <youtube :video-id="videoId" player-width="1280" player-height="750" :player-vars="{autoplay: autoState}"></youtube>-->
+<!--          </section>-->
+<!--        </no-ssr>-->
       </div>
 
       <div v-else>
@@ -41,10 +52,6 @@
         </div>
         <div class="prize-page__date">
           Время: <span>{{ d.date.substr(11, 5) }}</span>
-        </div>
-
-        <div class="prize-page__date">
-          {{  }}
         </div>
 
         <vue-count-down
@@ -121,15 +128,17 @@ export default {
       registerInfo: [],
       registerStatus: '',
       curHash: this.$route.params.hash,
-      curDate: new Date()
+      curDate: new Date(),
+      // autoState: '0',
+      // load: false,
+      // videoId: 'OUv8z8ETbQw'
     };
   },
   mounted() {
+
   },
-  computed:{
-    calcDate(date, time) {
-      return Math.abs(new Date(date + ' ' + time) - this.curDate);
-    }
+  computed: {
+
   },
   methods: {
     registerOnDraw(d) {
@@ -156,7 +165,28 @@ export default {
           this.errorMessage = error.message;
           console.log("ERROR!", error.message);
         });
-    }
+    },
+    // ready (event) {
+    //   this.player = event.target
+    // },
+    // playing (event) {
+    //   // The player is playing a video.
+    // },
+    // change () {
+    //   // when you change the value, the player will also change.
+    //   // If you would like to change `playerVars`, please change it before you change `videoId`.
+    //   // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
+    //   // If `playerVars.autoplay` is 0, `cueVideoById` will be called.
+    //   this.videoId = 'K6NyK1o-SFk'
+    // },
+
+
+    // stop () {
+    //   this.player.stopVideo()
+    // },
+    // pause () {
+    //   this.player.pauseVideo()
+    // }
   },
   created() {
     this.$axios.get("http://10.1.12.36/api/draws", {

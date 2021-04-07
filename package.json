@@ -23,7 +23,8 @@
     "vue-gtag": "^1.11.0",
     "vue-moment": "^4.1.0",
     "vue-scrollto": "^2.20.0",
-    "vue-uuid": "^2.0.2"
+    "vue-uuid": "^2.0.2",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "fibers": "^5.0.0",

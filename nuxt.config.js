@@ -37,6 +37,7 @@ export default {
   plugins: [
     {src: "~/plugins/defaultPlugin", mode: "client"},
     {src: "~/plugins/gtm", mode: "client"},
+    // {src: "~/plugins/youtube", ssr: false},
   ],
   /*
   ** Auto import components

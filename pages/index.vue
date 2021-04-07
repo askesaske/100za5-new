@@ -12,7 +12,7 @@
             {{ $t('welcome.subtitle') }}
           </p>
           <div class="welcome-section__row welcome-section__row--desktop">
-            <button class="welcome-section__btn">
+            <button class="welcome-section__btn" v-scroll-to="{el:'#products', duration: 700,}">
               {{ $t('welcome.buttonTxt') }}
             </button>
 
@@ -32,15 +32,18 @@
 
         <div class="welcome-section__slider">
           <div class="swiper-container welcome-section__swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide" data-swiper-autoplay="2000">
+            <div class="swiper-wrapper welcome-section__swiper-wrapper">
+              <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
+                <img src="../assets/img/slider-2.png" alt="">
+              </div>
+              <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
                 <img src="../assets/img/slider-1.png" alt="">
               </div>
-              <div class="swiper-slide" data-swiper-autoplay="2000">
-                <img src="../assets/img/slider-1.png" alt="">
+              <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
+                <img src="../assets/img/slider-3.png" alt="">
               </div>
-              <div class="swiper-slide" data-swiper-autoplay="2000">
-                <img src="../assets/img/slider-1.png" alt="">
+              <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
+                <img src="../assets/img/slider-4.png" alt="">
               </div>
             </div>
             <div class="swiper-pagination welcome-section__pagination"></div>
@@ -48,7 +51,7 @@
         </div>
 
         <div class="welcome-section__row welcome-section__row--tab">
-          <button class="welcome-section__btn">
+          <button class="welcome-section__btn" v-scroll-to="{el:'#products', duration: 700,}">
             {{ $t('welcome.buttonTxt') }}
           </button>
 
@@ -248,7 +251,7 @@
 
     </section>
 
-    <section class="main__white-section white-section">
+    <section class="main__white-section white-section" id="products">
       <img src="../assets/img/white-section-left.png" alt=""
            class="white-section__side-img white-section__side-img--left">
       <img src="../assets/img/white-section-right.png" alt=""
@@ -271,13 +274,12 @@
             <div class="swiper-container products-slider__swiper-container">
               <div class="swiper-wrapper">
                 <div v-for="prize in prizes" :key="prize.id" class="swiper-slide products-slider__item">
-                  <img :src="require('../assets/img/' + prize.img)" alt="" class="products-slider__img">
+                  <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">
                   <div class="products-slider__info">
                     <div class="products-slider__title">
                       {{ prize.name }}
                     </div>
-                    <div class="products-slider__desc">
-                      {{ prize.desc }}
+                    <div class="products-slider__desc" v-html="prize.desc">
                     </div>
                   </div>
                 </div>
@@ -364,67 +366,21 @@ export default {
       prizes: [
         {
           id: 1,
-          name: "IPhone 12 Pro Max",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "iphone-img.png"
+          name: "Кофеварка",
+          desc: "Начните свой день с отличного настроения и чашечки кофе с наcыщенным вкуcом приготовленным стильной кофеваркой от BOSCH.",
+          img: "coffe-machine.png"
         },
         {
           id: 2,
-          name: "Стайлер  “Dyson”",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "dyson-img.png"
+          name: "Пылесос",
+          desc: "Беспроводной ручной пылесос с облегченной конструкцией корпуса. Удобный и компактный для легкой уборки.",
+          img: "vaccum.png"
         },
         {
           id: 3,
-          name: "Airpods Pro",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "airpods-img.png"
-        },
-        {
-          id: 4,
-          name: "Apple watch",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "apple-watch-img.png"
-        },
-        {
-          id: 5,
-          name: "IPhone 12 Pro Max",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "iphone-img.png"
-        },
-        {
-          id: 6,
-          name: "Стайлер  “Dyson”",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "dyson-img.png"
-        },
-        {
-          id: 7,
-          name: "Airpods Pro",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "airpods-img.png"
-        },
-        {
-          id: 8,
-          name: "Apple watch",
-          desc: "В целом, конечно, постоянное информационно-пропагандистское обеспечение " +
-            "нашей деятельности не даёт нам " +
-            "иного выбора, кроме определения переосмысления внешнеэкономических политик.",
-          img: "apple-watch-img.png"
+          name: "Массажер",
+          desc: "Перкуссионный массажер  для изолированного массажа мышц. Компактный, мощный, эффективный! Для восстановления всех групп мышц, в том числе до и после физических нагрузок. ",
+          img: "massager.png"
         },
       ]
     };
@@ -569,6 +525,7 @@ export default {
       autoplay: {
         delay: 2000
       },
+      spaceBetween: 40,
       slidesPerView: 1,
       pagination: {
         el: '.welcome-section__pagination',
@@ -593,7 +550,7 @@ export default {
           spaceBetween: 20,
         },
         1200: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 40,
         }
       }

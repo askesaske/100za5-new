@@ -13,7 +13,7 @@
   }
 
   &__info {
-    max-width: 53%;
+    max-width: 50%;
     flex-wrap: nowrap;
   }
 
@@ -44,7 +44,7 @@
     border: 1px solid $white-color;
     border-radius: 10px;
     @include text-style(1.8rem, 700, $white-color);
-    margin-right: 54px;
+    margin-right: 28px;
     text-wrap: none;
     flex-shrink: 0;
   }
@@ -73,7 +73,17 @@
   }
 
   &__slider {
-    width: 351px;
+    width: 580px;
+  }
+
+  &__swiper-wrapper {
+    align-items: center;
+  }
+
+  &__swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__swiper-container {
