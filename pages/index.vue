@@ -37,9 +37,6 @@
                 <img src="../assets/img/slider-2.png" alt="">
               </div>
               <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
-                <img src="../assets/img/slider-1.png" alt="">
-              </div>
-              <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
                 <img src="../assets/img/slider-3.png" alt="">
               </div>
               <div class="swiper-slide welcome-section__swiper-slide" data-swiper-autoplay="2000">
@@ -269,11 +266,33 @@
             {{ $t('products.subtitle') }}
           </p>
 
+<!--          <div class="white-section__list products-slider">-->
+
+<!--            <div class="swiper-container products-slider__swiper-container">-->
+<!--              <div class="swiper-wrapper">-->
+<!--                <div v-for="prize in prizes" :key="prize.id" class="swiper-slide products-slider__item">-->
+<!--                  <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">-->
+<!--                  <div class="products-slider__info">-->
+<!--                    <div class="products-slider__title">-->
+<!--                      {{ prize.name }}-->
+<!--                    </div>-->
+<!--                    <div class="products-slider__desc" v-html="prize.desc">-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="swiper-pagination products-slider__pagination"></div>-->
+
+<!--              <div class="swiper-button-next products-slider__next"></div>-->
+<!--              <div class="swiper-button-prev products-slider__prev"></div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+
           <div class="white-section__list products-slider">
 
-            <div class="swiper-container products-slider__swiper-container">
-              <div class="swiper-wrapper">
-                <div v-for="prize in prizes" :key="prize.id" class="swiper-slide products-slider__item">
+            <div class="products-slider__row">
+                <div v-for="prize in prizes" :key="prize.id" class="products-slider__item">
                   <img :src="require('../assets/img/slider/' + prize.img)" alt="" class="products-slider__img">
                   <div class="products-slider__info">
                     <div class="products-slider__title">
@@ -283,11 +302,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-pagination products-slider__pagination"></div>
-              <!-- Add Arrows -->
-              <div class="swiper-button-next products-slider__next"></div>
-              <div class="swiper-button-prev products-slider__prev"></div>
             </div>
 
           </div>

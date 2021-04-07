@@ -1,69 +1,80 @@
 .products-slider {
-  overflow: hidden;
-  margin-left: -40px;
-  margin-right: -40px;
 
-  &__swiper-container {
-    width: 1160px;
-    overflow: unset;
-  }
+  // if slider
+  //overflow: hidden;
+  //margin-left: -40px;
+  //margin-right: -40px;
+  //
+  //&__swiper-container {
+  //  width: 1160px;
+  //  overflow: unset;
+  //}
+  //
+  //&__next {
+  //  right: -46px;
+  //  width: 48px;
+  //  height: 48px;
+  //  transform: scale(.7);
+  //
+  //  &:after {
+  //    content: '';
+  //    width: 48px;
+  //    height: 48px;
+  //    background-image: url("../assets/img/icons/slider-arrow.png");
+  //  }
+  //}
+  //
+  //&__prev {
+  //  left: -46px;
+  //  width: 48px;
+  //  height: 48px;
+  //  transform: scale(.7) rotate(180deg);
+  //
+  //  &:after {
+  //    content: '';
+  //    width: 48px;
+  //    height: 48px;
+  //    background-image: url("../assets/img/icons/slider-arrow.png");
+  //  }
+  //}
+  //
+  //&__swiper-container {
+  //  padding-bottom: 50px;
+  //  padding-top: 20px;
+  //}
+  //
+  //.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .products-slider__pagination {
+  //  bottom: 0;
+  //}
+  //
+  //&__pagination {
+  //  width: 100%;
+  //  bottom: 0;
+  //
+  //  .swiper-pagination-bullet {
+  //    width: 12px;
+  //    height: 12px;
+  //    background-color: $main-color;
+  //    opacity: .3;
+  //    margin: 0 5px;
+  //  }
+  //
+  //  .swiper-pagination-bullet-active {
+  //    opacity: 1;
+  //  }
+  //}
 
-  &__next {
-    right: -46px;
-    width: 48px;
-    height: 48px;
-    transform: scale(.7);
+  // here ends
 
-    &:after {
-      content: '';
-      width: 48px;
-      height: 48px;
-      background-image: url("../assets/img/icons/slider-arrow.png");
-    }
-  }
-
-  &__prev {
-    left: -46px;
-    width: 48px;
-    height: 48px;
-    transform: scale(.7) rotate(180deg);
-
-    &:after {
-      content: '';
-      width: 48px;
-      height: 48px;
-      background-image: url("../assets/img/icons/slider-arrow.png");
-    }
-  }
-
-  &__swiper-container {
-    padding-bottom: 50px;
-    padding-top: 20px;
-  }
-
-  .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .products-slider__pagination {
-    bottom: 0;
-  }
-
-  &__pagination {
-    width: 100%;
-    bottom: 0;
-
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: $main-color;
-      opacity: .3;
-      margin: 0 5px;
-    }
-
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-    }
+  &__row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
-    //width: 260px;
+    width: 360px;
     background: #FFFFFF;
     box-shadow: 0 0 30px rgba(175, 175, 175, 0.27);
     border-radius: 20px;
@@ -96,6 +107,20 @@
     &__swiper-container {
       width: unset;
     }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 49px;
+      }
+
+      &:first-child {
+        margin-right: 49px;
+      }
+    }
+
+    &__row {
+      justify-content: center;
+    }
   }
 
   @include respond(phone) {
@@ -110,6 +135,21 @@
     &__desc {
       font-size: 1.2rem;
       line-height: 14px;
+    }
+
+    &__item {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+
+    &__row {
+      justify-content: center;
     }
   }
 }
