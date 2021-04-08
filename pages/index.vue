@@ -398,8 +398,9 @@ export default {
   },
   watch: {},
   methods: {
+
     checkPromo() {
-      this.$axios.get("https://100za5.kz:8000/api/promocodes/check", {
+      this.$axios.get("http://10.1.12.36/api/promocodes/check", {
         params: {
           phone: this.phoneNumber
             .replace(/-/g, '')
@@ -439,7 +440,7 @@ export default {
             }
             this.promoCodeUsed = true;
           }
-          this.$axios.post("https://100za5.kz:8000/api/promocodes/deactivate", {
+          this.$axios.post("http://10.1.12.36/api/promocodes/deactivate", {
             phone: this.phoneNumber
               .replace(/-/g, '')
               .replace('(', '')
@@ -466,7 +467,7 @@ export default {
     },
 
     payFee() {
-      this.$axios.post("https://payment.bloomzed.kz:8080/payments", {
+      this.$axios.post("http://79.142.93.158:3333/payments", {
           "paymentType": 1,
           "amount": {
             "sum": this.price * 100,
@@ -567,7 +568,7 @@ export default {
     });
 
 
-    this.$axios.get("https://100za5.kz:8000/api/draws", {
+    this.$axios.get("http://10.1.12.36/api/draws", {
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',
@@ -582,7 +583,7 @@ export default {
         }
       });
 
-    this.$axios.get("https://100za5.kz:8000/api/winners", {
+    this.$axios.get("http://10.1.12.36/api/winners", {
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',

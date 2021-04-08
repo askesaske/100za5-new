@@ -33,7 +33,7 @@ export default {
     };
   },
   mounted() {
-    this.$axios.get("https://100za5.kz:8000/api/draws",{
+    this.$axios.get("http://10.1.12.36/api/draws",{
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',

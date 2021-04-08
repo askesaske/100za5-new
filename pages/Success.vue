@@ -28,7 +28,7 @@ export default {
     if(code !== '' && phone !== '') {
       localStorage.setItem("phone", '');
       localStorage.setItem("promo", '');
-      this.$axios.post("https://100za5.kz:8000/api/promocodes/deactivate", {
+      this.$axios.post("http://10.1.12.36/api/promocodes/deactivate", {
         phone: phone,
         promocode: code
       }, {
@@ -48,7 +48,7 @@ export default {
     if(code !== '' && phone === '') {
       localStorage.setItem("phone", '');
       localStorage.setItem("promo", '');
-      this.$axios.post("https://100za5.kz:8000/api/promocodes/deactivate", {
+      this.$axios.post("http://10.1.12.36/api/promocodes/deactivate", {
         phone: '',
         promocode: code
       }, {
@@ -65,7 +65,7 @@ export default {
         });
     }
 
-    this.$axios.get("https://100za5.kz:8000/api/draws",{
+    this.$axios.get("http://10.1.12.36/api/draws",{
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',
