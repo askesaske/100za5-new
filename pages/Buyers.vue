@@ -63,7 +63,7 @@ export default {
   },
   methods: {},
   created() {
-    this.$axios.get("http://10.1.12.36/api/winners", {
+    this.$axios.get("https://100za5.kz:8000/api/winners", {
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',
@@ -72,7 +72,7 @@ export default {
     })
       .then(response => (this.winners = response.data.data));
 
-    this.$axios.get("http://10.1.12.36/api/draws", {
+    this.$axios.get("https://100za5.kz:8000/api/draws", {
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',

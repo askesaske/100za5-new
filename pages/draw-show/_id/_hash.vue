@@ -142,7 +142,7 @@ export default {
   },
   methods: {
     registerOnDraw(d) {
-      this.$axios.post("http://10.1.12.36/api/draw-register", {
+      this.$axios.post("https://100za5.kz:8000/api/draw-register", {
           draw_id: d.id,
           hash: this.curHash
         },
@@ -189,7 +189,7 @@ export default {
     // }
   },
   created() {
-    this.$axios.get("http://10.1.12.36/api/draws", {
+    this.$axios.get("https://100za5.kz:8000/api/draws", {
       credentials: true,
       auth: {
         username: 'admin@randomizer.kz',
