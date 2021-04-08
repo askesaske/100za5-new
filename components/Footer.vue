@@ -23,13 +23,13 @@
         <div class="footer__link-group">
 
           <div class="footer__links">
-            <nuxt-link :to="localePath('/Rules')" tag="a" class="footer__link">{{ $t('navigation.rules') }}</nuxt-link>
-            <nuxt-link :to="localePath('/FAQ')" tag="a" class="footer__link">{{ $t('navigation.faq') }}</nuxt-link>
+            <nuxt-link :to="localePath('/public-offer')" tag="a" class="footer__link">{{ $t('navigation.publicOffer') }}</nuxt-link>
+            <nuxt-link :to="localePath('/Policy')" tag="a" class="footer__link">{{ $t('navigation.policy') }}</nuxt-link>
           </div>
 
           <div class="footer__links">
-            <nuxt-link :to="localePath('/public-offer')" tag="a" class="footer__link">{{ $t('navigation.publicOffer') }}</nuxt-link>
-            <nuxt-link :to="localePath('/Policy')" tag="a" class="footer__link">{{ $t('navigation.policy') }}</nuxt-link>
+<!--            <nuxt-link :to="localePath('/Rules')" tag="a" class="footer__link">{{ $t('navigation.rules') }}</nuxt-link>-->
+            <nuxt-link :to="localePath('/FAQ')" tag="a" class="footer__link">{{ $t('navigation.faq') }}</nuxt-link>
           </div>
 
         </div>
