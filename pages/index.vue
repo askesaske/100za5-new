@@ -25,6 +25,7 @@
             </div>
 
             <video-modal v-if="videoOpened" @close="videoOpened = false"></video-modal>
+
           </div>
         </div>
 
@@ -50,7 +51,7 @@
             {{ $t('welcome.buttonTxt') }}
           </button>
 
-          <div class="welcome-section__video" @click="videoOpened = true">
+          <div class="welcome-section__video" @click="openVideo2">
             <div class="welcome-section__play-box">
               <svg width="12" height="15">
                 <use href="../assets/img/icons.svg#play"></use>
@@ -60,7 +61,8 @@
             {{ $t('welcome.videoTxt') }}
           </div>
 
-          <video-modal v-if="videoOpened" @close="videoOpened = false"></video-modal>
+          <video-modal v-if="videoOpened2" @close="videoOpened2 = false"></video-modal>
+
         </div>
       </div>
     </section>
@@ -381,6 +383,7 @@ export default {
   data() {
     return {
       videoOpened: false,
+      videoOpened2: false,
       draws: [],
       winners: [],
       phoneNumber: '',
@@ -521,6 +524,10 @@ export default {
 
     openVideo() {
       this.videoOpened = true;
+    },
+
+    openVideo2() {
+      this.videoOpened2 = true;
     }
   },
   mounted() {
