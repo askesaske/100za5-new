@@ -33,6 +33,10 @@
       margin-right: 20px;
     }
 
+    &:last-child {
+      display: none;
+    }
+
     &--active {
       font-weight: 700;
       color: #000000;

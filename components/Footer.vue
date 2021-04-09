@@ -53,13 +53,13 @@
       </div>
 
       <div class="footer__socials footer__socials--desktop">
-        <a href="#" class="footer__social">
+        <a href="https://www.instagram.com/100_za_5.kz/" class="footer__social">
           <svg width="41" height="41">
             <use href="../assets/img/icons.svg#inst"></use>
           </svg>
         </a>
 
-        <a href="#" class="footer__social">
+        <a href="https://wa.me/77717532729" class="footer__social">
           <svg width="41" height="40">
             <use href="../assets/img/icons.svg#wpp"></use>
           </svg>

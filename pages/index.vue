@@ -467,7 +467,7 @@ export default {
 
     payFee() {
       this.$axios.post("https://payment.bloomzed.kz:8080/payments", {
-          "paymentType": 1,
+          "paymentType": 5,
           "amount": {
             "sum": this.price * 100,
             "currency": {
@@ -475,7 +475,7 @@ export default {
               "minorUnits": 100
             }
           },
-          "description": "оплата участия в 100 за 5",
+          "description": "Оплата клубного взноса 100 за 5",
           "phoneNumber": this.phoneNumber
             .replace(/-/g, '')
             .replace('(', '')
@@ -483,10 +483,11 @@ export default {
             .replace('+', ''),
           "options": {
             "callbacks": {
-              "successUrl": "http://10.1.12.36:8000/Success/",
-              "failureUrl": "http://10.1.12.36:8000/Failure/",
-              "backUrl": "http://10.1.12.36:8000/Prizes/"
+              "successUrl": "https://100za5.kz/Success/",
+              "failureUrl": "https://100za5.kz/Failure/",
+              "backUrl": "https://100za5.kz/"
             },
+            "publicOffer": "https://100za5.kz/public-offer/",
             "promoCode": this.promoCode
           },
           "createNotExistedUse": false,
@@ -494,7 +495,6 @@ export default {
             {
               "id": 12345,
               "name": "100 за 5",
-              "amount": 100000,
               "count": 1,
             }
           ],
