@@ -46,7 +46,7 @@
   &__input-group {
     position: relative;
     &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 
@@ -163,7 +163,7 @@
 
     &__label {
       @include text-style(1.4rem, 400, $accent-color);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     &__new-price {

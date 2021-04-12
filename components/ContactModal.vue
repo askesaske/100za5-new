@@ -7,17 +7,17 @@
           <div class="modal__content">
 
             <div class="modal__title">
-              Свяжись со службой поддержки
+              {{ $t('contactModal.title') }}
             </div>
 
             <div class="modal__input-group">
-              <input type="text" class="modal__input input" placeholder="Имя">
+              <input type="text" class="modal__input input" :placeholder="$t('contactModal.name')">
               <input type="text" class="modal__input input" placeholder="E-mail">
-              <input type="text" class="modal__input input" placeholder="Номер телефона">
-              <textarea class="modal__input input input--textarea" placeholder="Сообщение"></textarea>
+              <input type="text" class="modal__input input" :placeholder="$t('contactModal.phone')">
+              <textarea class="modal__input input input--textarea" :placeholder="$t('contactModal.message')"></textarea>
             </div>
 
-            <button class="modal__button button button--w100">Отправить</button>
+            <button class="modal__button button button--w100">{{ $t('contactModal.send') }}</button>
           </div>
 
           <button class="modal__close" @click="$emit('close')">

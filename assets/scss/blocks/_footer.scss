@@ -49,7 +49,6 @@
     align-items: flex-start;
     @include text-style(1.8rem, 400, #e0e8eb);
     line-height: 21px;
-
     svg {
       margin-right: 16px;
     }
@@ -58,8 +57,15 @@
       margin-bottom: 30px;
     }
 
-    &:first-child {
+    a {
+      display: block;
+      @include text-style(1.8rem, 400, #e0e8eb);
+      line-height: 21px;
       font-weight: 700;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
     }
   }
 
@@ -137,6 +143,11 @@
 
       &:not(:last-child) {
         margin-bottom: 30px;
+      }
+
+      a {
+        @include text-style(1.4rem, 700, #e0e8eb);
+        line-height: 16px;
       }
     }
   }

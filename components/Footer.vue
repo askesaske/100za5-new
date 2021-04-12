@@ -23,24 +23,33 @@
         <div class="footer__link-group">
 
           <div class="footer__links">
-            <nuxt-link :to="localePath('/public-offer')" tag="a" class="footer__link">{{ $t('navigation.publicOffer') }}</nuxt-link>
-            <nuxt-link :to="localePath('/Policy')" tag="a" class="footer__link">{{ $t('navigation.policy') }}</nuxt-link>
+            <nuxt-link :to="localePath('/public-offer')" tag="a" class="footer__link">{{
+                $t('navigation.publicOffer')
+              }}
+            </nuxt-link>
+            <nuxt-link :to="localePath('/Policy')" tag="a" class="footer__link">{{
+                $t('navigation.policy')
+              }}
+            </nuxt-link>
           </div>
 
           <div class="footer__links">
-<!--            <nuxt-link :to="localePath('/Rules')" tag="a" class="footer__link">{{ $t('navigation.rules') }}</nuxt-link>-->
+            <!--            <nuxt-link :to="localePath('/Rules')" tag="a" class="footer__link">{{ $t('navigation.rules') }}</nuxt-link>-->
             <nuxt-link :to="localePath('/FAQ')" tag="a" class="footer__link">{{ $t('navigation.faq') }}</nuxt-link>
           </div>
 
         </div>
 
         <div class="footer__contacts">
-          <a href="tel: +7 (701) 786 99 76" class="footer__contact">
+          <div class="footer__contact">
             <svg width="21" height="21">
               <use href="../assets/img/icons.svg#phone"></use>
             </svg>
-            +7 (701)-786-99-76
-          </a>
+            <div>
+              <a href="tel: +7 (701) 786 99 76">+7 (701)-786-99-76</a>
+              <a href="tel: +7 (727) 345 41 91">+7 (727)-345-41-91</a>
+            </div>
+          </div>
 
           <div class="footer__contact">
             <svg width="20" height="29">
