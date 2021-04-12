@@ -3,6 +3,7 @@
   background-image: url("../assets/img/welcome-section-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 800px;
 
   &__container {
     @extend %container;
