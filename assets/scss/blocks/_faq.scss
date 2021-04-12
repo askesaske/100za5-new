@@ -83,6 +83,11 @@
   &__text {
     @include text-style(1.8rem, 400, $accent-color);
     line-height: 21px;
+
+    span {
+      display: block;
+      padding-left: 10px;
+    }
   }
 
   @include respond(phone) {
